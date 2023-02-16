@@ -1,5 +1,5 @@
 <div class="banner">
-    <div class="content">
+    <div class="content d-flex flex-column justify-content-center align-item-center p-lg-5 p-2">
         <h1 class="mb-5">The Natural Made Product<br><span class="blue">Reuse Reduce Recycle.</span></h1>
         <a routerLink="menu">Order Now <i class="bi bi-arrow-right"></i></a>
     </div>
@@ -30,8 +30,8 @@
  <div class="container mt-4 mb-4">
     <h1 class="text-center">Customers <span class="highlight">Favourites Product</span></h1>
     <div class="row">
-        <div class="col -lg-3" *ngFor="let pd of productData;index as i">
-            <div class="productBox" *ngIf="i<=4">
+        <div class="col-lg-3 col-6" *ngFor="let pd of productData;index as i">
+            <div class="productBox" *ngIf="i<=4" [routerLink]="['/menu',pd.id]">
                 <img src="{{pd.productImg}}" class="img-fluid"/>
                 <h1>{{pd.productName}}</h1>
                 <p>{{pd.productPrice | currency:'INR'}}</p>
@@ -40,4 +40,4 @@
         </div>
     </div>
  </div>
- <a routerLink="menu" class="viewmorebtn m-5 p-2">view more<i class="bi bi-arrow-right"></i></a>
+ <a routerLink="menu" class="viewmorebtn m-5 p-2">View more<i class="bi bi-arrow-right"></i></a>
