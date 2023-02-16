@@ -1,0 +1,43 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">The Natural Made Product<br><span class="blue">Reuse Reduce Recycle.</span></h1>
+        <a routerLink="menu">Order Now <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">How To Get<span class="highlight"> Natural Product</span></h1>
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>select product</p>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+        <h1>2</h1>
+        <p>fill the details</p>
+        </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+        <h1>3</h1>
+        <p>your order will delivered in few days</p>
+        </div>
+        </div>
+    </div>
+</div>
+ <div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourites Product</span></h1>
+    <div class="row">
+        <div class="col -lg-3" *ngFor="let pd of productData;index as i">
+            <div class="productBox" *ngIf="i<=4">
+                <img src="{{pd.productImg}}"/>
+                <h1>{{pd.productName}}</h1>
+                <p>{{pd.productPrice | currency:'INR'}}</p>
+            </div>
+
+        </div>
+    </div>
+ </div>
+ <a routerLink="menu" class="viewmorebtn">view more<i class="bi bi-arrow-right"></i></a>
